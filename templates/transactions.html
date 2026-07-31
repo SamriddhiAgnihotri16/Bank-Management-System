@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Transactions</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<h2>🏦 Bank Management System</h2>
+
+<div>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/logout">Logout</a>
+
+</div>
+
+</nav>
+
+<div class="table-container">
+
+<h2>Transaction History</h2>
+
+<table>
+
+<tr>
+
+<th>Date</th>
+
+<th>Type</th>
+
+<th>Amount</th>
+
+<th>Balance</th>
+
+</tr>
+
+{% for t in transactions %}
+
+<tr>
+
+<td>{{ t['date_time'] }}</td>
+
+<td>{{ t['transaction_type'] }}</td>
+
+<td>₹ {{ t['amount'] }}</td>
+
+<td>₹ {{ t['balance_after'] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+
+</html>

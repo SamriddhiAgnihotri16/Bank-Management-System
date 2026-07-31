@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+        <div class="flash-message">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+<nav class="navbar">
+<h2>🏦 Bank Management System</h2>
+
+<div>
+<a href="/">Home</a>
+<a href="/login">Login</a>
+</div>
+
+</nav>
+
+<div class="form-container">
+
+<form class="form-box" action="/register" method="POST">
+
+<h2>Create Account</h2>
+
+<input
+type="text"
+name="full_name"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email"
+required>
+
+<input
+type="text"
+name="phone"
+placeholder="Phone Number"
+required>
+
+<input
+type="number"
+name="balance"
+placeholder="Initial Deposit"
+required>
+
+<input
+type="password"
+name="pin"
+placeholder="4 Digit PIN"
+maxlength="4"
+required>
+
+<button class="btn">
+Create Account
+</button>
+
+<p>
+
+Already have an account?
+
+<a href="/login">
+Login
+</a>
+
+</p>
+
+</form>
+
+</div>
+
+</body>
+</html>

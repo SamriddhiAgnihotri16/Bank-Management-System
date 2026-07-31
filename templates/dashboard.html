@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<h2>🏦 Bank Management System</h2>
+
+<div>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/transactions">Transactions</a>
+
+<a href="/logout">Logout</a>
+
+</div>
+
+</nav>
+
+<div class="dashboard">
+
+<div class="welcome-card">
+
+<h2>Welcome, {{ user['full_name'] }}</h2>
+
+<p>
+
+<b>Account Number :</b>
+
+{{ user['account_number'] }}
+
+</p>
+
+<p>
+
+<b>Email :</b>
+
+{{ user['email'] }}
+
+</p>
+
+<p>
+
+<b>Phone :</b>
+
+{{ user['phone'] }}
+
+</p>
+
+</div>
+
+<div class="balance-card">
+
+<h1>
+
+₹ {{ user['balance'] }}
+
+</h1>
+
+<p>Available Balance</p>
+
+</div>
+
+<div class="actions">
+
+<a href="/deposit" class="action-btn">
+
+💰 Deposit
+
+</a>
+
+<a href="/withdraw" class="action-btn">
+
+💸 Withdraw
+
+</a>
+
+<a href="/transactions" class="action-btn">
+
+📜 Transactions
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

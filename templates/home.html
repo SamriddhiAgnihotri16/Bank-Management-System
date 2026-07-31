@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+        <div class="flash-message">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+<nav class="navbar">
+
+    <h2>🏦 Bank Management System</h2>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Create Account</a>
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <h1>Welcome to Bank Management System</h1>
+
+    <p>
+        Secure Banking made Simple.
+        Manage your account, deposits,
+        withdrawals and transactions easily.
+    </p>
+
+    <div class="buttons">
+
+        <a href="/login" class="btn">
+            Login
+        </a>
+
+        <a href="/register" class="btn btn-outline">
+            Create Account
+        </a>
+
+    </div>
+
+</section>
+
+<section class="features">
+
+    <div class="card">
+
+        <h3>🔐 Secure Login</h3>
+
+        <p>
+            Login safely using your
+            Account Number and PIN.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>💰 Deposit</h3>
+
+        <p>
+            Deposit money instantly
+            into your account.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>💸 Withdraw</h3>
+
+        <p>
+            Withdraw money securely
+            anytime.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>📜 History</h3>
+
+        <p>
+            View complete
+            transaction history.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+
+        ©️ 2026 Bank Management System
+
+    </p>
+
+</footer>
+
+</body>
+</html>

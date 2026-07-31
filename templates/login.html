@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Bank Management System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+        <div class="flash-message">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+<nav class="navbar">
+    <h2>🏦 Bank Management System</h2>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/register">Create Account</a>
+    </div>
+</nav>
+
+<div class="form-container">
+
+    <form class="form-box" method="POST" action="/login">
+
+        <h2>Customer Login</h2>
+
+        <input
+            type="text"
+            name="account_number"
+            placeholder="Account Number"
+            required>
+
+        <input
+            type="password"
+            name="pin"
+            placeholder="4-Digit PIN"
+            maxlength="4"
+            required>
+
+        <button class="btn" type="submit">
+            Login
+        </button>
+
+        <p>
+            Don't have an account?
+
+            <a href="/register">
+                Create Account
+            </a>
+        </p>
+
+    </form>
+
+</div>
+
+</body>
+</html>
