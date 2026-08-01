@@ -143,18 +143,7 @@ Contributions are welcome!
 
 ## 👨‍💻 Author
 
-**Sarthak Singh**
+**Samriddhi Agnihotri**
 
 B.Tech (CSE - AI & ML)
 
-GitHub: https://github.com/your-username
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-⭐ If you found this project helpful, don't forget to **star the repository**!
