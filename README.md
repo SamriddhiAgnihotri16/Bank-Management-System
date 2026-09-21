@@ -13,8 +13,6 @@ A **Bank Management System** built to simplify and automate basic banking operat
 - 🔄 Transfer Funds
 - 📊 Check Account Balance
 - 📜 Transaction History
-- ✏️ Update Customer Details
-- ❌ Delete Account
 - 📱 Responsive User Interface
 
 ---
@@ -30,9 +28,12 @@ A **Bank Management System** built to simplify and automate basic banking operat
 - Python (Flask)
 
 ### Database
-- SQLite / MySQL
+- SQLite
 
 ---
+
+## Live
+
 
 ## 📂 Project Structure
 
